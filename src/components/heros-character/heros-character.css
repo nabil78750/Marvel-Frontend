@@ -1,0 +1,21 @@
+.container-heros-character {
+  width: 1425px;
+  border-bottom: solid 5px black;
+  border-top: solid 5px black;
+}
+
+.heros-character-img {
+  display: flex;
+  position: relative;
+}
+.heros-character-img img {
+  height: 375px;
+  width: 100%;
+}
+.title-character {
+  position: absolute;
+  top: 170px;
+  left: 450px;
+  font-size: 48px;
+  color: white;
+}

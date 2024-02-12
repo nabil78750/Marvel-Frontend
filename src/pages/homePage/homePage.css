@@ -1,0 +1,129 @@
+.container-ch {
+  width: 1425px;
+  margin: 0px;
+  padding: 10px 0;
+  background-image: linear-gradient(to bottom, #870000, #190a05);
+  padding-bottom: 50px;
+  border-bottom: solid 5px black;
+}
+
+.character-container {
+  gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.character-map {
+  border: solid 5px;
+  border-image: linear-gradient(to bottom, #870000, #190a05);
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  -ms-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  -o-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  border-image-slice: 1;
+  height: 510px;
+  width: 280px;
+}
+.character-img {
+  height: 253px;
+  border-bottom: solid 3px;
+  border-image: linear-gradient(to bottom, #870000, #190a05);
+  border-image-slice: 1;
+}
+.character-container img {
+  height: 100%;
+  width: 100%;
+}
+
+.character-descript {
+  width: 100%;
+  background-color: #151515;
+  height: 50%;
+  padding: 10px 10px;
+}
+.container-ch input {
+  height: 40px;
+  width: 600px;
+  margin: 30px 135px;
+  padding-left: 10px;
+  border: solid 3px #202020;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  -ms-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  -o-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  border-image-slice: 1;
+}
+.container-ch > p {
+  font-size: 16px;
+  color: #202020;
+  font-weight: bold;
+  margin-left: 135px;
+}
+.character-descript h1 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: white;
+}
+.character-container p {
+  font-size: 13px;
+  text-decoration: none;
+  color: white;
+}
+.character-link {
+  text-decoration: none;
+}
+.button-page {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+.button-page button {
+  background-color: #202020;
+  padding: 5px 10px;
+  color: #870000;
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  -ms-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  -o-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.button-page span {
+  display: flex;
+  justify-content: center;
+  color: white;
+  padding: 5px 30px;
+  font-size: 21px;
+  font-weight: bold;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  -ms-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  -o-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
