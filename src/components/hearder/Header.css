@@ -13,8 +13,7 @@ header img {
 }
 .header-nav {
   display: flex;
-  justify-content: center;
-  gap: 200px;
+  justify-content: space-around;
   margin: 10px 20px;
 }
 .header-link {
