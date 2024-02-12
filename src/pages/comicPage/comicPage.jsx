@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import "../comicPage/comicPage.css";
 import { useSearchParams } from "react-router-dom";
-import Heros from "../../components/heros-comics/Heros-comics";
+import Heros from "../../components/heros-comics/heros-comics";
 
 const ComicPage = () => {
   let [searchParams, setSearchParams] = useSearchParams();
