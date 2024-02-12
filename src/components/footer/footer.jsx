@@ -29,18 +29,16 @@ const Footer = () => {
         <div className="footer-nav-logo">
           <div>
             <img src={logoInsider} />
-            <p>
-              MARVEL INSIDER
-              <p className="footer-p">Get Rewarded for Being a Marvel Fan</p>
-            </p>
+            <div>
+              <p>MARVEL INSIDER</p>
+            </div>
           </div>
 
           <div>
             <img src={logUmarvel} />
-            <p>
-              MARVEL UNLIMITED
-              <p className="footer-p">Access Over 30,000+ Digital Comics</p>
-            </p>
+            <div className="footer-para">
+              <p>MARVEL UNLIMITED</p>
+            </div>
           </div>
         </div>
         <div>
