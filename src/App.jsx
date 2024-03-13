@@ -8,6 +8,7 @@ import HomePage from "./pages/homePage/homePage";
 import CharacterPage from "./pages/characterPage/characterPage";
 import FavorisPage from "./pages/favorisPage/favorisPage";
 import Footer from "./components/footer/footer";
+import ComicidPage from "./pages/comicidPage/comicidPage";
 
 function App() {
   const [token, setToken] = useState(Cookies.get("userToken") || "");
@@ -17,8 +18,9 @@ function App() {
       <Routes>
         <Route path="/comics" element={<ComicPage />} />
         <Route path="/" element={<HomePage setToken={setToken} />} />
-        <Route path="/characters/:id" element={<CharacterPage />} />
+        <Route path="/character/:id" element={<CharacterPage />} />
         <Route path="/favoris" element={<FavorisPage />} />
+        <Route path="/comic/:id" element={<ComicidPage />} />
       </Routes>
       <Footer />
     </Router>

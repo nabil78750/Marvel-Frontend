@@ -1,6 +1,8 @@
 header {
-  background-color: #202020;
-  height: 100px;
+  background-color: #151515;
+  height: 120px;
+
+  border-bottom: 1px solid #393939;
 }
 .container-img {
   display: flex;
@@ -14,7 +16,9 @@ header img {
 .header-nav {
   display: flex;
   justify-content: space-around;
-  margin: 10px 20px;
+  padding-top: 20px;
+
+  /* margin: 10px 20px; */
 }
 .header-link {
   text-decoration: none;

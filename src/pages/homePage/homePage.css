@@ -1,16 +1,15 @@
-.container-ch {
+.container {
   width: 1425px;
   margin: 0px;
   padding: 10px 0;
   background-image: linear-gradient(to bottom, #870000, #190a05);
   padding-bottom: 50px;
-  border-bottom: solid 5px black;
+  border: solid 5px black;
 }
 
 .character-container {
-  gap: 15px;
+  margin-top: 30px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
 }
 .character-map {
@@ -26,7 +25,7 @@
     0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   border-image-slice: 1;
-  height: 510px;
+  height: 480px;
   width: 280px;
 }
 .character-img {
@@ -43,8 +42,9 @@
 .character-descript {
   width: 100%;
   background-color: #151515;
-  height: 50%;
-  padding: 10px 10px;
+  height: 46%;
+  padding: 15px 0px;
+  text-align: center;
 }
 .container-ch input {
   height: 40px;
@@ -83,31 +83,6 @@
 }
 .character-link {
   text-decoration: none;
-}
-.button-page {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-bottom: 30px;
-}
-.button-page button {
-  background-color: #202020;
-  padding: 5px 10px;
-  color: #870000;
-  font-size: 15px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-
-  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-    0 10px 10px rgba(0, 0, 0, 0.22);
-  -moz-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-    0 10px 10px rgba(0, 0, 0, 0.22);
-  -ms-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-    0 10px 10px rgba(0, 0, 0, 0.22);
-  -o-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-    0 10px 10px rgba(0, 0, 0, 0.22);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .button-page span {

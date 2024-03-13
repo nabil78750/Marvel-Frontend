@@ -1,20 +1,18 @@
 import "../characterPage/characterPage.css";
 import { useParams } from "react-router-dom";
-
-import { useLocation } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
 const CharacterPage = () => {
   const [dataCharacters, setDataCharacters] = useState();
   const [isLoading, setIsLoading] = useState(true);
-  const location = useLocation();
-  // const { _id } = location.state;
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/comics/${id}`);
+        const response = await axios.get(
+          `https://site--marvel-backend--vmpzhpnkq74r.code.run/comics/${id}`
+        );
         console.log(">>>>>data", response.data);
         setDataCharacters(response.data);
       } catch (error) {
@@ -32,7 +30,7 @@ const CharacterPage = () => {
   return isLoading ? (
     <span>Chargement en cours</span>
   ) : (
-    <main className="container">
+    <main className="container-character">
       <div className="characterid-container ">
         <img
           src={

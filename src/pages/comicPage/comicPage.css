@@ -1,22 +1,19 @@
 .container {
-  width: 1425px;
-
+  width: 1435px;
   padding: 10px 0;
   background-image: linear-gradient(to bottom, #870000, #190a05);
   padding-bottom: 50px;
-  border-bottom: solid 5px black;
+  border: solid 5px black;
 }
 
 .comic-container {
-  gap: 15px;
-  display: flex;
-  flex-wrap: wrap;
   padding-left: 15px;
+  display: flex;
 }
 
 .comic-container img {
   height: 250px;
-  width: 100%;
+  width: 300px;
   object-fit: cover;
 }
 
@@ -52,19 +49,20 @@
 .comic-descript h1 {
   font-size: 16px;
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-top: 20px;
+  color: black;
 }
-.comic-container p {
-  font-size: 12px;
-  width: 100%;
-}
+
 .comic-map {
+  margin-top: 20px;
   margin-left: 30px;
   margin-bottom: 20px;
   background-color: white;
-  padding: 10px 10px;
-  height: 540px;
-  width: 400px;
+  padding: 15px 15px;
+  height: 500px;
+  width: 350px;
+  border: solid black 3px;
+  border-radius: 30px;
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
     0 10px 10px rgba(0, 0, 0, 0.22);
   -moz-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
@@ -74,4 +72,8 @@
   -o-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
     0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.comic-link {
+  text-decoration: none;
+  text-align: center;
 }

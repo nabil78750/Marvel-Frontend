@@ -14,8 +14,19 @@
 }
 .title-character {
   position: absolute;
-  top: 170px;
+  top: 150px;
   left: 450px;
   font-size: 48px;
-  color: white;
+  display: inline-block;
+  background: linear-gradient(to bottom, #870000, #190a05);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title-character h1 {
+  font-size: 56px;
+  font-weight: bolder;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }

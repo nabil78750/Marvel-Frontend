@@ -3,14 +3,3 @@
   border-bottom: solid 5px black;
   border-top: solid 5px black;
 }
-
-.heros-img {
-  display: flex;
-  overflow: hidden;
-  overflow-x: scroll;
-}
-.heros-img img {
-  height: 700px;
-  width: 100%;
-  object-fit: cover;
-}

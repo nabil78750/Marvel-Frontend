@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 import { useSearchParams } from "react-router-dom";
 import Cookies from "js-cookie";
 import Heros from "../../components/heros-character/heros-character";
+import { PaginationControl } from "react-bootstrap-pagination-control";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const HomePage = ({ setToken }) => {
   let [searchParams, setSearchParams] = useSearchParams();
@@ -17,7 +20,7 @@ const HomePage = ({ setToken }) => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3001/characters?name=${search}&page=${page}`
+          `https://site--marvel-backend--vmpzhpnkq74r.code.run/characters?name=${search}&page=${page}`
         );
         // console.log("data>>>>>", response.data);
         setDataCharacters(response.data);
@@ -29,37 +32,46 @@ const HomePage = ({ setToken }) => {
     fetchData();
   }, [search, page]);
 
-  const previousPage = () => {
-    setSearchParams({ page: page - 1 });
-    setPage(page - 1);
-  };
+  // const handlSubmit = (event) => {
+  //   event.prentDefault();
+  //   if (data) {
+  //     //--  Création du cookie
+  //     Cookies.set("userToken", data.token, { secure: true });
 
-  const nextPage = () => {
-    setSearchParams({ page: page + 1 });
-    setPage(page + 1);
-  };
-
-  const handlSubmit = (event) => {
-    event.prentDefault();
-    if (data) {
-      //--  Création du cookie
-      Cookies.set("userToken", data.token, { secure: true });
-
-      // -- Envoie du token au state
-      {
-        console.log(data.token);
-      }
-      setToken("token>>>>", data.token);
-    } else {
-      setErrorMessage("Veuillez remplir tous les champs");
-    }
+  //     // -- Envoie du token au state
+  //     {
+  //       console.log(data.token);
+  //     }
+  //     setToken("token>>>>", data.token);
+  //   } else {
+  //     setErrorMessage("Veuillez remplir tous les champs");
+  //   }
+  // };
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
   };
   return isLoading ? (
     <span>En cours de chargement</span>
   ) : (
     <>
       <Heros />
-      <main className="container-ch">
+      <main className="container">
         <input
           type="text"
           name=""
@@ -71,20 +83,26 @@ const HomePage = ({ setToken }) => {
           }}
         />
         <p>{dataCharacters.count} RESULTS</p>
-        <div className="button-page">
-          {page > 1 && <button onClick={previousPage}>PREV</button>}
-          <span>{page}</span>
-          {page < 15 && <button onClick={nextPage}>NEXT</button>}
+        <div>
+          <PaginationControl
+            page={page}
+            between={4}
+            total={dataCharacters.count}
+            limit={100}
+            changePage={(page) => {
+              setPage(page);
+            }}
+            ellipsis={1}
+          />
         </div>
-
-        <div className="character-container">
+        <Carousel responsive={responsive} slidesToSlide={2}>
           {dataCharacters.results.map((data) => {
             return (
-              <form onSubmit={handlSubmit} key={data._id}>
+              <div key={data._id} className="character-container">
                 <div className="character-map">
                   <Link
                     className="character-link"
-                    to={`/characters/${data._id}`}
+                    to={`/character/${data._id}`}
                   >
                     {/* {console.log("id>>>", data._id)}
                   {console.log("name>>>>", data.name)}
@@ -99,15 +117,14 @@ const HomePage = ({ setToken }) => {
 
                     <div className="character-descript">
                       <h1>{data.name}</h1>
-                      <p>{data.description}</p>
+                      {/* <p>{data.description}</p> */}
                     </div>
                   </Link>
                 </div>
-                <button className="button-favoris">Favoris</button>
-              </form>
+              </div>
             );
           })}
-        </div>
+        </Carousel>
       </main>
     </>
   );
